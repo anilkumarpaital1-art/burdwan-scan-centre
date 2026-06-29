@@ -1,0 +1,139 @@
+/* =========================
+   TESTIMONIALS
+========================= */
+
+.testimonials-section{
+    padding:70px 5%;
+    background:#f8fafc;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.testimonial-tag{
+    display:inline-block;
+    padding:8px 18px;
+    background:#eff6ff;
+    color:#2563eb;
+    border-radius:50px;
+    font-size:.85rem;
+    font-weight:600;
+    margin-bottom:18px;
+}
+
+.section-title h2{
+    font-size:64px;
+    font-weight:700;
+    line-height:1.1;
+    letter-spacing:-1px;
+
+    color:#0f172a;
+
+    margin-bottom:18px;
+}
+
+/* =========================
+   GRID
+========================= */
+
+.testimonials-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:22px;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.testimonial-card{
+    background:rgba(255,255,255,.75);
+    backdrop-filter:blur(12px);
+    border:1px solid rgba(226,232,240,.8);
+    border-radius:22px;
+    padding:24px;
+    transition:.3s ease;
+}
+
+.testimonial-card:hover{
+    transform:translateY(-5px);
+    border-color:#bfdbfe;
+    box-shadow:0 15px 40px rgba(37,99,235,.08);
+}
+
+.testimonial-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:18px;
+}
+
+.stars{
+    display:flex;
+    gap:3px;
+    color:#fbbf24;
+    font-size:.9rem;
+}
+
+.verified{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    font-size:.8rem;
+    color:#059669;
+    font-weight:600;
+}
+
+.review{
+    color:#475569;
+    line-height:1.8;
+    margin-bottom:20px;
+    font-size:.96rem;
+}
+
+.testimonial-card h4{
+    color:#0f172a;
+    font-size:1rem;
+    font-weight:700;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px){
+
+    .testimonials-section{
+        padding:60px 5%;
+    }
+
+    .testimonial-card{
+        padding:20px;
+    }
+
+    .section-title h2{
+    font-size:48px;
+}
+
+.section-title p{
+    font-size:16px;
+}
+
+}
+
+@media(max-width:480px){
+
+    .testimonials-section{
+        padding:50px 16px;
+    }
+
+    .section-title h2{
+        font-size:32px;
+    }
+
+    .section-title p{
+        font-size:15px;
+    }
+}

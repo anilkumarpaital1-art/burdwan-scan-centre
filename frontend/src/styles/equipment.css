@@ -1,0 +1,208 @@
+.equipment-section {
+  padding: 90px 80px;
+
+  background:
+    linear-gradient(
+      to bottom,
+      #ffffff,
+      #f8fafc
+    );
+}
+
+.equipment-header {
+  text-align: center;
+
+  margin-bottom: 60px;
+}
+
+.equipment-header h2{
+  font-size:64px;
+  font-weight:700;
+  line-height:1.1;
+  letter-spacing:-1px;
+
+  color:#0f172a;
+
+  margin-bottom:18px;
+}
+
+.equipment-header p {
+  max-width: 700px;
+
+  margin: auto;
+
+  color: #64748b;
+
+  line-height: 1.8;
+}
+
+.equipment-card {
+  background: white;
+
+  border-radius: 20px;
+
+  height:100%;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.06);
+
+  transition: 0.4s ease;
+}
+
+.equipment-card:hover {
+  transform: translateY(-8px);
+}
+
+.equipment-image {
+  width: 100%;
+
+  height: 240px;
+
+  overflow: hidden;
+
+  background: #e2e8f0;
+}
+
+.equipment-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: 0.5s ease;
+}
+
+.equipment-card:hover img {
+  transform: scale(1.08);
+}
+
+.equipment-content {
+  padding: 28px;
+
+  min-height:260px;
+}
+
+.equipment-year{
+  display:inline-block;
+
+  padding:6px 12px;
+
+  margin-bottom:14px;
+
+  border-radius:999px;
+
+  background:#ecfeff;
+
+  color:#009688;
+
+  font-size:14px;
+  font-weight:700;
+}
+
+.equipment-content h3{
+  font-size:1.8rem;
+  font-weight:700;
+
+  color:#0f172a;
+
+  min-height: 75px;
+
+  line-height:1.3;
+
+  margin-bottom:14px;
+}
+
+.equipment-content p{
+  color:#64748b;
+
+  font-size:16px;
+
+  line-height:1.8;
+
+  margin:0;
+}
+
+.equipment-content a {
+  display: inline-block;
+
+  padding: 12px 22px;
+
+  border-radius: 50px;
+
+  background: #0ea5e9;
+
+  color: white;
+
+  text-decoration: none;
+
+  font-weight: 600;
+
+  transition: 0.3s ease;
+}
+
+.equipment-content a:hover {
+  background: #0284c7;
+}
+
+.swiper-pagination {
+  margin-top: 30px !important;
+
+  position: relative !important;
+}
+
+
+@media(max-width:768px){
+
+  .equipment-section{
+    padding:70px 20px;
+  }
+
+
+  .equipment-image{
+  height:240px;
+}
+}
+
+@media(max-width:480px){
+
+  .equipment-section{
+    padding:50px 16px;
+  }
+
+  .equipment-image{
+    height:180px;
+  }
+}
+
+@media(max-width:768px){
+
+  .equipment-header{
+    margin-bottom:40px;
+  }
+
+  .equipment-header h2{
+    font-size:48px;
+  }
+
+    .equipment-content h3{
+    font-size:1.5rem;
+    min-height:auto;
+  }
+
+  .equipment-header p{
+    font-size:16px;
+  }
+}
+
+@media(max-width:480px){
+
+  .equipment-header h2{
+    font-size:32px;
+  }
+
+  .equipment-header p{
+    font-size:15px;
+  }
+}

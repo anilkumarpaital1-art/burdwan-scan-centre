@@ -1,0 +1,73 @@
+/* =========================
+   ADMIN LAYOUT
+========================= */
+
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.admin-main {
+  flex: 1;
+
+  margin-left: 260px;
+
+  min-height: 100vh;
+
+  background: #08111f;
+
+  transition: all 0.3s ease;
+}
+
+.admin-content {
+  padding: 0;
+  background: #08111f;
+}
+
+.page-shell {
+  min-height: calc(100vh - 68px);
+  margin: 0;
+  padding: 30px;
+}
+
+/* =========================
+   LARGE TABLET
+========================= */
+
+@media (max-width: 1024px) {
+  .admin-main {
+    margin-left: 220px;
+  }
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 768px) {
+  .admin-main {
+    margin-left: 75px;
+  }
+
+  .admin-content {
+    padding: 20px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 480px) {
+  .admin-main {
+    margin-left: 0;
+  }
+
+  .admin-content {
+    padding: 15px;
+  }
+}

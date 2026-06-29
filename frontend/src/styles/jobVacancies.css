@@ -1,0 +1,643 @@
+/* =========================================
+   JOB PAGE
+========================================= */
+
+.job-page{
+    width:100%;
+    min-height:100vh;
+
+    background:#f8fafc;
+
+    padding:110px 5% 80px;
+}
+
+/* =========================================
+   HERO
+========================================= */
+
+.job-search{
+    max-width:1000px;
+    margin:0 auto 45px;
+}
+
+
+.job-hero h1{
+    font-size:clamp(2.5rem,5vw,4.5rem);
+    font-weight:800;
+
+    color:#0f172a;
+
+    line-height:1.1;
+
+    margin-bottom:20px;
+}
+
+.job-hero p{
+    max-width:700px;
+
+    margin:0;
+
+    color:#64748b;
+
+    line-height:1.9;
+    font-size:1rem;
+}
+
+/* =========================================
+   SEARCH
+========================================= */
+
+.job-search{
+    width:100%;
+    max-width:900px;
+
+    margin:0 0 45px;
+
+    display:flex;
+    align-items:center;
+    gap:15px;
+
+    background:#fff;
+
+    padding:18px 24px;
+
+    border-radius:22px;
+
+    border:1px solid #e2e8f0;
+
+    box-shadow:
+    0 15px 40px rgba(15,23,42,.04);
+}
+
+.job-search svg{
+    font-size:1.1rem;
+    color:#64748b;
+}
+
+.job-search input{
+    width:100%;
+
+    border:none;
+    outline:none;
+
+    background:none;
+
+    font-size:1rem;
+}
+
+/* =========================================
+   GRID
+========================================= */
+
+.job-grid{
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(360px,1fr));
+
+    gap:28px;
+}
+
+/* =========================================
+   CARD
+========================================= */
+
+.job-card{
+    position:relative;
+
+    background:#fff;
+
+    border:1px solid #e2e8f0;
+
+    border-radius:28px;
+
+    padding:30px;
+
+    overflow:hidden;
+
+    transition:.35s ease;
+
+    box-shadow:
+    0 12px 30px rgba(15,23,42,.04);
+}
+
+.job-card::before{
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:5px;
+
+    background:
+    linear-gradient(
+        90deg,
+        #0f9d92,
+        #14b8a6
+    );
+}
+
+.job-card:hover{
+    transform:translateY(-8px);
+
+    box-shadow:
+    0 25px 50px rgba(15,23,42,.08);
+}
+
+.job-status{
+    display:inline-flex;
+
+    align-items:center;
+
+    padding:8px 16px;
+
+    border-radius:999px;
+
+    background:#dcfce7;
+    color:#15803d;
+
+    font-size:.85rem;
+    font-weight:700;
+
+    text-transform:capitalize;
+
+    margin-bottom:20px;
+}
+
+.job-card h3{
+    font-size:1.9rem;
+    font-weight:800;
+
+    color:#0f172a;
+
+    margin-bottom:30px;
+
+    line-height:1.2;
+}
+
+.job-card-footer{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+}
+
+.job-last-date{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+
+    color:#64748b;
+
+    font-size:.9rem;
+}
+
+.job-last-date svg{
+    color:#0f9d92;
+}
+
+.job-last-date strong{
+    color:#0f172a;
+}
+
+.view-job-btn{
+    border:none;
+
+    background:#0f9d92;
+    color:#fff;
+
+    padding:14px 22px;
+
+    border-radius:14px;
+
+    cursor:pointer;
+
+    font-size:.95rem;
+    font-weight:600;
+
+    transition:.3s ease;
+}
+
+.view-job-btn:hover{
+    background:#0b8178;
+}
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.job-empty{
+    background:#fff;
+
+    border-radius:30px;
+
+    border:1px solid #e2e8f0;
+
+    padding:90px 30px;
+
+    text-align:center;
+}
+
+.job-empty svg{
+    font-size:4rem;
+    color:#94a3b8;
+
+    margin-bottom:20px;
+}
+
+.job-empty h3{
+    font-size:1.7rem;
+    color:#0f172a;
+
+    margin-bottom:10px;
+}
+
+.job-empty p{
+    max-width:500px;
+    margin:auto;
+
+    color:#64748b;
+    line-height:1.9;
+}
+
+/* =========================================
+   LOADER
+========================================= */
+
+.job-loading{
+    text-align:center;
+    padding:100px 20px;
+}
+
+.loader{
+    width:55px;
+    height:55px;
+
+    border-radius:50%;
+
+    border:4px solid #e2e8f0;
+    border-top-color:#0f9d92;
+
+    margin:auto;
+
+    animation:spin .8s linear infinite;
+}
+
+@keyframes spin{
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+.job-loading p{
+    margin-top:15px;
+    color:#64748b;
+}
+
+/* =========================================
+   CONTACT
+========================================= */
+
+.career-contact{
+    margin-top:70px;
+
+    background:#fff;
+
+    border-radius:30px;
+
+    border:1px solid #e2e8f0;
+
+    padding:40px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    gap:30px;
+}
+
+.contact-content h2{
+    font-size:2rem;
+    color:#0f172a;
+
+    margin-bottom:12px;
+}
+
+.contact-content p{
+    color:#64748b;
+    line-height:1.9;
+}
+
+.contact-details{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.contact-item{
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    text-decoration:none;
+
+    color:#0f172a;
+
+    font-weight:600;
+}
+
+.contact-item svg{
+    color:#0f9d92;
+}
+
+/* =========================================
+   MODAL
+========================================= */
+
+.job-modal-overlay{
+    position:fixed;
+    inset:0;
+
+    background:
+    rgba(15,23,42,.65);
+
+    backdrop-filter:blur(6px);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:20px;
+
+    z-index:9999;
+}
+
+.job-modal{
+    width:100%;
+    max-width:750px;
+
+    background:#fff;
+
+    border-radius:32px;
+
+    padding:35px;
+
+    position:relative;
+
+    max-height:90vh;
+    overflow-y:auto;
+
+    animation:popup .25s ease;
+}
+
+@keyframes popup{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.close-job-modal{
+    position:absolute;
+
+    top:18px;
+    right:18px;
+
+    width:46px;
+    height:46px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#f1f5f9;
+
+    cursor:pointer;
+
+    font-size:1rem;
+}
+
+.modal-tag{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+
+    padding:10px 16px;
+
+    border-radius:999px;
+
+    background:#dcfce7;
+    color:#15803d;
+
+    font-weight:700;
+
+    margin-bottom:18px;
+}
+
+.job-modal h2{
+    font-size:2.3rem;
+    font-weight:800;
+
+    color:#0f172a;
+
+    margin-bottom:30px;
+}
+
+.job-detail-block{
+    margin-bottom:28px;
+}
+
+.job-detail-block h4{
+    font-size:1rem;
+    color:#0f172a;
+
+    margin-bottom:8px;
+}
+
+.job-detail-block p{
+    color:#64748b;
+
+    line-height:1.9;
+}
+
+.job-modal-actions{
+    display:flex;
+    gap:15px;
+
+    margin-top:35px;
+}
+
+.apply-btn,
+.secondary-btn{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+
+    text-decoration:none;
+
+    padding:14px 22px;
+
+    border-radius:14px;
+
+    font-weight:600;
+
+    transition:.3s ease;
+}
+
+.apply-btn{
+    background:#0f9d92;
+    color:#fff;
+}
+
+.secondary-btn{
+    background:#eff6ff;
+    color:#2563eb;
+}
+
+.apply-btn:hover,
+.secondary-btn:hover{
+    transform:translateY(-2px);
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media(max-width:992px){
+
+    .career-contact{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .job-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media(max-width:768px){
+
+    
+
+    .job-page{
+        padding:95px 20px 60px;
+    }
+
+    .job-hero{
+    text-align:left;
+    margin-bottom:25px;
+}
+
+.job-hero h1{
+    font-size:3rem;
+    line-height:1.05;
+}
+
+.job-hero p{
+    margin:0;
+}
+
+.job-search{
+    max-width:100%;
+    margin-bottom:30px;
+}
+
+    .job-card{
+        padding:24px;
+        border-radius:24px;
+    }
+
+    .job-card h3{
+        font-size:1.45rem;
+        margin-bottom:25px;
+    }
+
+    .job-card-footer{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .view-job-btn{
+        width:100%;
+    }
+
+    .career-contact{
+        padding:28px;
+    }
+
+    .contact-content h2{
+        font-size:1.6rem;
+    }
+
+    .job-modal{
+        padding:25px;
+        border-radius:24px;
+    }
+
+    .job-modal h2{
+        font-size:1.7rem;
+        padding-right:50px;
+    }
+
+    .job-modal-actions{
+        flex-direction:column;
+    }
+
+    .apply-btn,
+    .secondary-btn{
+        width:100%;
+    }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media(max-width:480px){
+
+    .job-page{
+        padding:90px 16px 50px;
+    }
+
+    .job-card{
+        padding:20px;
+    }
+
+    .job-card h3{
+        font-size:1.3rem;
+    }
+
+    .job-search{
+        border-radius:18px;
+    }
+
+    .job-modal{
+        padding:22px;
+    }
+
+    .job-modal h2{
+        font-size:1.5rem;
+    }
+
+    .close-job-modal{
+        width:40px;
+        height:40px;
+    }
+
+    .contact-item{
+        font-size:.92rem;
+        word-break:break-word;
+    }
+}

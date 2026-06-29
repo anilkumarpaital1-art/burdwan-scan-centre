@@ -1,0 +1,665 @@
+/* ==========================================
+   PAGE
+========================================== */
+
+.diagnostic-premium-page{
+    min-height:100vh;
+    background:#f8fafc;
+    padding-bottom:90px;
+}
+
+/* ==========================================
+   TOP HEADER
+========================================== */
+
+.diagnostic-top-header{
+    padding:110px 6% 35px;
+}
+
+.diagnostic-top-header-content{
+    max-width:900px;
+}
+
+
+.diagnostic-top-header-content h1{
+    font-size:clamp(2.4rem,5vw,4rem);
+    font-weight:800;
+    line-height:1.05;
+    letter-spacing:-2px;
+    color:#0f172a;
+    margin-bottom:16px;
+}
+
+.diagnostic-top-header-content p{
+    font-size:1.05rem;
+    color:#64748b;
+    line-height:1.8;
+    max-width:700px;
+}
+
+/* ==========================================
+   FILTER NAVBAR
+========================================== */
+
+.diagnostic-filter-navbar{
+    position:sticky;
+    top:0;
+    z-index:50;
+
+    backdrop-filter:blur(20px);
+
+    background:rgba(248,250,252,.9);
+
+    border-top:1px solid #e2e8f0;
+    border-bottom:1px solid #e2e8f0;
+}
+
+.diagnostic-filter-scroll{
+    padding:18px 6%;
+
+    display:flex;
+    gap:12px;
+
+    overflow-x:auto;
+    scrollbar-width:none;
+}
+
+.diagnostic-filter-scroll::-webkit-scrollbar{
+    display:none;
+}
+
+.diagnostic-filter-chip{
+    border:none;
+    outline:none;
+
+    flex-shrink:0;
+
+    cursor:pointer;
+
+    padding:13px 22px;
+
+    border-radius:999px;
+
+    background:#fff;
+
+    color:#334155;
+
+    font-weight:600;
+    font-size:.92rem;
+
+    border:1px solid #e2e8f0;
+
+    transition:.3s;
+}
+
+.diagnostic-filter-chip:hover{
+    transform:translateY(-2px);
+    border-color:#2563eb;
+}
+
+.diagnostic-filter-chip-active{
+    background:#2563eb;
+    color:#fff;
+    border-color:#2563eb;
+
+    box-shadow:
+    0 10px 25px rgba(37,99,235,.25);
+}
+
+/* ==========================================
+   RESULTS HEADER
+========================================== */
+
+.diagnostic-results-header{
+    padding:45px 6% 10px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+}
+
+.diagnostic-results-header h2{
+    font-size:2rem;
+    color:#0f172a;
+    font-weight:800;
+    letter-spacing:-1px;
+}
+
+.diagnostic-results-header span{
+    color:#64748b;
+    font-weight:600;
+}
+
+/* ==========================================
+   SERVICES GRID
+========================================== */
+
+.diagnostic-service-grid{
+    width:88%;
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(320px,1fr));
+
+    gap:30px;
+
+    padding-top:25px;
+}
+
+/* ==========================================
+   CARD
+========================================== */
+
+.diagnostic-service-card{
+    background:#fff;
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+    cursor:pointer;
+
+    border:1px solid #e5e7eb;
+
+    transition:.35s ease;
+
+    box-shadow:
+    0 10px 35px rgba(15,23,42,.04);
+}
+
+.diagnostic-service-card:hover{
+    transform:
+    translateY(-8px);
+
+    box-shadow:
+    0 25px 60px rgba(15,23,42,.10);
+}
+
+.diagnostic-service-image{
+    width:100%;
+    height:240px;
+    overflow:hidden;
+}
+
+.diagnostic-service-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+
+    transition:.6s ease;
+}
+
+.diagnostic-service-card:hover
+.diagnostic-service-image img{
+    transform:scale(1.08);
+}
+
+.diagnostic-service-content{
+    padding:24px;
+}
+
+.diagnostic-card-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    margin-bottom:18px;
+}
+
+.diagnostic-service-mini-tag{
+    padding:8px 14px;
+
+    border-radius:999px;
+
+    background:#eff6ff;
+
+    color:#2563eb;
+
+    font-size:.78rem;
+    font-weight:700;
+}
+
+.diagnostic-card-arrow{
+    font-size:1.4rem;
+    color:#94a3b8;
+    transition:.3s;
+}
+
+.diagnostic-service-card:hover
+.diagnostic-card-arrow{
+    transform:translateX(6px);
+    color:#2563eb;
+}
+
+.diagnostic-service-content h3{
+    font-size:1.3rem;
+    font-weight:700;
+    color:#0f172a;
+    line-height:1.3;
+
+    margin-bottom:12px;
+}
+
+.diagnostic-service-content p{
+    color:#64748b;
+    line-height:1.7;
+    font-size:.95rem;
+
+    overflow:hidden;
+
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:3;
+
+    line-clamp:3;
+}
+/* ==========================================
+   EMPTY STATE
+========================================== */
+
+.diagnostic-empty-state{
+    text-align:center;
+    padding:100px 20px;
+}
+
+.diagnostic-empty-state h3{
+    font-size:1.5rem;
+    margin-bottom:10px;
+    color:#0f172a;
+}
+
+.diagnostic-empty-state p{
+    color:#64748b;
+}
+
+/* ==========================================
+   MODAL
+========================================== */
+
+.diagnostic-modal-overlay{
+    position:fixed;
+    inset:0;
+
+    background:
+    rgba(15,23,42,.65);
+
+    backdrop-filter:blur(10px);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    z-index:9999;
+
+    padding:25px;
+
+    animation:diagFade .25s ease;
+}
+
+.diagnostic-modal-box{
+    width:min(1100px,100%);
+    max-height:90vh;
+
+    overflow-y:auto;
+
+    background:#fff;
+
+    border-radius:34px;
+
+    position:relative;
+
+    animation:diagModal .3s ease;
+
+    box-shadow:
+    0 50px 120px rgba(0,0,0,.2);
+}
+
+.diagnostic-modal-close{
+    position:absolute;
+
+    top:18px;
+    right:18px;
+
+    width:44px;
+    height:44px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#fff;
+
+    cursor:pointer;
+
+    font-size:1.1rem;
+
+    z-index:10;
+
+    box-shadow:
+    0 8px 20px rgba(0,0,0,.12);
+}
+
+.diagnostic-modal-banner{
+    width:100%;
+    height:320px;
+}
+
+.diagnostic-modal-banner img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.diagnostic-modal-head{
+    padding:35px 40px 15px;
+}
+
+.diagnostic-modal-category{
+    display:inline-flex;
+
+    padding:8px 14px;
+
+    border-radius:999px;
+
+    background:#eff6ff;
+
+    color:#2563eb;
+
+    font-size:.8rem;
+    font-weight:700;
+
+    margin-bottom:18px;
+}
+
+.diagnostic-modal-head h2{
+    font-size:2.5rem;
+    line-height:1.1;
+    color:#0f172a;
+    font-weight:800;
+}
+
+.diagnostic-modal-description-box{
+    padding:0 40px 30px;
+}
+
+.diagnostic-modal-description-box h3{
+    font-size:1.25rem;
+    color:#0f172a;
+    margin-bottom:14px;
+}
+
+.diagnostic-modal-description-box p{
+    color:#475569;
+    line-height:2;
+}
+
+.diagnostic-modal-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:24px;
+
+    padding:0 40px 40px;
+}
+
+.diagnostic-modal-card{
+    background:#f8fafc;
+
+    border:1px solid #e2e8f0;
+
+    border-radius:24px;
+
+    padding:24px;
+}
+
+.diagnostic-modal-card h3{
+    color:#0f172a;
+    margin-bottom:18px;
+}
+
+.diagnostic-modal-card ul{
+    list-style:none;
+}
+
+.diagnostic-modal-card li{
+    position:relative;
+    padding-left:20px;
+
+    margin-bottom:14px;
+
+    color:#475569;
+
+    line-height:1.7;
+}
+
+.diagnostic-modal-card li::before{
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    top:10px;
+
+    width:8px;
+    height:8px;
+
+    border-radius:50%;
+
+    background:#2563eb;
+}
+
+/* ==========================================
+   LOADING
+========================================== */
+
+.diagnostic-loading-screen{
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:1.2rem;
+    font-weight:700;
+
+    color:#0f172a;
+}
+
+/* ==========================================
+   ANIMATIONS
+========================================== */
+
+@keyframes diagFade{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
+
+@keyframes diagModal{
+    from{
+        opacity:0;
+        transform:
+        translateY(40px)
+        scale(.97);
+    }
+
+    to{
+        opacity:1;
+        transform:
+        translateY(0)
+        scale(1);
+    }
+}
+
+/* ==========================================
+   LARGE TABLET
+========================================== */
+
+@media (max-width:992px){
+
+    .diagnostic-service-grid{
+        width:92%;
+    }
+
+    .diagnostic-modal-grid{
+        grid-template-columns:1fr;
+    }
+
+    .diagnostic-modal-head,
+    .diagnostic-modal-description-box,
+    .diagnostic-modal-grid{
+        padding-left:28px;
+        padding-right:28px;
+    }
+
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width:768px){
+
+    .diagnostic-top-header{
+        padding:100px 28px 25px;
+    }
+
+    .diagnostic-filter-scroll{
+        padding:16px 28px;
+    }
+
+    .diagnostic-results-header{
+        padding:35px 28px 15px;
+        flex-direction:column;
+        align-items:flex-start;
+        gap:10px;
+    }
+
+    .diagnostic-results-header h2{
+        font-size:1.9rem;
+        line-height:1.15;
+        letter-spacing:-1px;
+    }
+
+    .diagnostic-service-grid{
+        width:calc(100% - 56px);
+        margin:auto;
+        gap:22px;
+    }
+
+
+
+    .diagnostic-results-header{
+        padding:30px 20px 10px;
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .diagnostic-results-header h2{
+        font-size:1.6rem;
+    }
+
+    .diagnostic-service-grid{
+        width:92%;
+        grid-template-columns:1fr;
+        gap:22px;
+    }
+
+    .diagnostic-service-image{
+        height:220px;
+    }
+
+    .diagnostic-modal-banner{
+        height:220px;
+    }
+
+    .diagnostic-modal-head h2{
+        font-size:1.9rem;
+    }
+
+    .diagnostic-modal-box{
+        border-radius:24px;
+    }
+}
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width:480px){
+
+    .diagnostic-top-header-content h1{
+        font-size:2rem;
+    }
+
+    .diagnostic-top-header-content p{
+        font-size:.95rem;
+    }
+
+    .diagnostic-filter-chip{
+        padding:11px 18px;
+        font-size:.82rem;
+    }
+
+    .diagnostic-service-content{
+        padding:20px;
+    }
+
+    .diagnostic-modal-head,
+    .diagnostic-modal-description-box,
+    .diagnostic-modal-grid{
+        padding-left:20px;
+        padding-right:20px;
+    }
+
+    .diagnostic-modal-head h2{
+        font-size:1.6rem;
+    }
+}
+
+.diagnostic-view-details-btn{
+    margin-top:20px;
+
+    width:100%;
+
+    border:none;
+    cursor:pointer;
+
+    background:#0f172a;
+    color:#fff;
+
+    padding:14px;
+
+    border-radius:14px;
+
+    font-size:.92rem;
+    font-weight:600;
+
+    transition:.3s ease;
+}
+
+.diagnostic-view-details-btn:hover{
+    background:#2563eb;
+}
+
+.diagnostic-modal-details{
+    margin-top:25px;
+}
+
+.diagnostic-modal-details p{
+    color:#475569;
+    line-height:2;
+    font-size:1rem;
+}
+
+.diagnostic-modal-box h2{
+    font-size:2rem;
+    font-weight:800;
+    color:#0f172a;
+    padding-right:40px;
+}
