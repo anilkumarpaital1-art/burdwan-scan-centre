@@ -63,7 +63,7 @@ export default function PrivacyPolicy() {
             <Mail size={24} />
             <div>
               <h4>Email</h4>
-              <p>info@burdwanscancentre.com</p>
+              <p>bscpl_bdn@rediffmail.com</p>
             </div>
           </div>
 
@@ -71,7 +71,7 @@ export default function PrivacyPolicy() {
             <Phone size={24} />
             <div>
               <h4>Phone</h4>
-              <p>+91 XXXXX XXXXX</p>
+              <p>+91 0342-2567533</p>
             </div>
           </div>
 

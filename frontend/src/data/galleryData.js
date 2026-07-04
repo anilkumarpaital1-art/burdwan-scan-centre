@@ -8,73 +8,67 @@ const galleryData = [
   {
     id: 2,
     image: "/images/gallery/2.jpg",
-    title: "MRI Scan Room",
+    title: "MRI Console Room",
   },
 
   {
     id: 3,
     image: "/images/gallery/3.jpg",
-    title: "CT Scan Facility",
+    title: "X-Ray Facility",
   },
 
   {
     id: 4,
     image: "/images/gallery/4.jpg",
-    title: "Diagnostic Laboratory",
-  },
-
-  {
-    id: 5,
-    image: "/images/gallery/5.jpg",
-    title: "Patient Care Unit",
+    title: "X-Ray Console Room",
   },
 
   {
     id: 6,
     image: "/images/gallery/6.jpg",
-    title: "Advanced Imaging",
+    title: "Hematology Department",
   },
 
   {
     id: 7,
     image: "/images/gallery/7.jpg",
-    title: "Diagnostic Equipment",
+    title: "Sample Collection",
   },
 
   {
     id: 8,
     image: "/images/gallery/8.jpg",
-    title: "Modern Healthcare",
+    title: "Lab Reporting",
   },
 
   {
     id: 9,
     image: "/images/gallery/9.jpg",
-    title: "Testing Laboratory",
+    title: "CT Scan Facility",
   },
 
   {
     id: 10,
     image: "/images/gallery/10.jpg",
-    title: "Healthcare Technology",
+    title: "1.5T MRI Facility",
   },
 
   {
     id: 11,
     image: "/images/gallery/11.jpg",
-    title: "Medical Diagnostics",
+    title: "USG Clinic",
   },
 
   {
     id: 12,
     image: "/images/gallery/12.jpg",
-    title: "Patient Support",
+    title: "",
   },
 
   {
     id: 13,
     image: "/images/gallery/13.jpg",
-    title: "Burdwan Scan Centre",
+    title: "CT Console",
   },
 ];
 
