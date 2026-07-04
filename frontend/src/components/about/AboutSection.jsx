@@ -3,12 +3,9 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import useCountUp from "../../hooks/useCountUp";
 
+import hospitalImage from "../../assets/about/aboutHero.jpg";
+
 import "../../styles/about.css";
-
-
-
-
-
 
   function AboutSection() {
 
@@ -52,9 +49,9 @@ import "../../styles/about.css";
       <div className="about-left">
 
         <img
-          src="https://www.burdwanscancentre.com/images/BSCPL3.jpg"
-          alt="hospital"
-        />
+  src={hospitalImage}
+  alt="Burdwan Scan Centre"
+/>
 
       </div>
 
