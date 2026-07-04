@@ -3,7 +3,11 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import { FaBullhorn, FaArrowRight } from "react-icons/fa";
 
+import API from "../../config/api";
+
 import "../../styles/noticePreview.css";
+
+const NOTICE_API = `${API}/api/notices`;
 
 function NoticePreview() {
   const [latestNotice, setLatestNotice] = useState(null);
@@ -12,9 +16,7 @@ function NoticePreview() {
   useEffect(() => {
     const fetchNotice = async () => {
       try {
-        const res = await axios.get(
-          "http://localhost:5000/api/notices"
-        );
+        const res = await axios.get(NOTICE_API);
 
         if (res.data.length > 0) {
           setLatestNotice(res.data[0]);
