@@ -18,6 +18,8 @@ import director from "../assets/about/anamika-nag.jpg";
 
 import "../styles/aboutPage.css";
 
+import SEO from "../components/seo/SEO";
+
 const establishedYear = 1992;
 const currentYear = new Date().getFullYear();
 const yearsOfExcellence = currentYear - establishedYear;
@@ -144,7 +146,15 @@ const offices = [
 ];
 
 function AboutPage() {
-  return (
+ return (
+  <>
+    <SEO
+      title="About Burdwan Scan Centre"
+      description="Learn about Burdwan Scan Centre, our history since 1992, NABL accredited laboratory, experienced specialists, advanced diagnostic technology, and commitment to quality healthcare."
+      keywords="About Burdwan Scan Centre, Diagnostic Centre Burdwan, NABL Laboratory Burdwan, MRI, CT Scan, Pathology, Healthcare"
+      url="/about"
+    />
+
     <div className="aboutpg">
 
       {/* ================= HERO ================= */}
@@ -680,8 +690,10 @@ function AboutPage() {
 
       </section>
 
-    </div>
+ 
 
+      </div>
+  </>
   );
 
 }

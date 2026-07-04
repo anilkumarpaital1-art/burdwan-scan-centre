@@ -15,6 +15,8 @@ import API from "../config/api";
 
 import "../styles/jobVacancies.css";
 
+import SEO from "../components/seo/SEO";
+
 function JobVacancies() {
   const [jobs, setJobs] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -53,7 +55,15 @@ function JobVacancies() {
       .includes(searchTerm.toLowerCase())
   );
 
-  return (
+return (
+  <>
+    <SEO
+      title="Career Opportunities | Burdwan Scan Centre"
+      description="Explore the latest career opportunities at Burdwan Scan Centre. Join our team of healthcare professionals dedicated to providing quality diagnostic services."
+      keywords="Burdwan Scan Centre Careers, Jobs in Burdwan, Healthcare Jobs, Diagnostic Centre Jobs, Medical Careers"
+      url="/job-vacancies"
+    />
+
     <section className="job-page">
 
       {/* HERO */}
@@ -341,6 +351,9 @@ function JobVacancies() {
       )}
 
     </section>
+
+    </>
+
   );
 }
 

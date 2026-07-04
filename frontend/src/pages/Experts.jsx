@@ -3,6 +3,8 @@ import axios from "axios";
 import "./../styles/expertsPage.css";
 import API from "../config/api";
 
+import SEO from "../components/seo/SEO";
+
 const EXPERT_API = `${API}/api/experts`;
 
 function Experts() {
@@ -33,6 +35,14 @@ function Experts() {
   }, []);
 
   return (
+  <>
+    <SEO
+      title="Our Medical Experts | Burdwan Scan Centre"
+      description="Meet the experienced radiologists, pathologists and healthcare professionals at Burdwan Scan Centre dedicated to accurate diagnosis and compassionate patient care."
+      keywords="Doctors Burdwan, Radiologist Burdwan, Pathologist Burdwan, Medical Experts, Burdwan Scan Centre"
+      url="/experts"
+    />
+
     <section className="experts-public-page">
 
       <div className="experts-public-header">
@@ -125,7 +135,8 @@ function Experts() {
 
       )}
 
-    </section>
+        </section>
+  </>
   );
 }
 

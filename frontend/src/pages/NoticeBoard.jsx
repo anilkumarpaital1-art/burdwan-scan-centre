@@ -14,6 +14,8 @@ import API from "../config/api";
 
 import "../styles/notice.css";
 
+import SEO from "../components/seo/SEO";
+
 function NoticeBoard() {
 
   const [notices, setNotices] = useState([]);
@@ -74,7 +76,14 @@ function NoticeBoard() {
       );
     });
 
-  return (
+return (
+  <>
+    <SEO
+      title="Notice Board | Burdwan Scan Centre"
+      description="Stay updated with the latest announcements, healthcare updates, holiday schedules, recruitment notices, and important information from Burdwan Scan Centre."
+      keywords="Burdwan Scan Centre Notice, Healthcare Notice, Diagnostic Centre Updates, Hospital Announcements, Burdwan"
+      url="/notice-board"
+    />
 
     <section className="notice-board-page">
 
@@ -356,6 +365,8 @@ function NoticeBoard() {
       )}
 
     </section>
+
+    </>
 
   );
 }

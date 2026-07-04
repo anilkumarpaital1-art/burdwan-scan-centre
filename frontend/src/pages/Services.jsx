@@ -5,6 +5,8 @@ import API from "../config/api";
 
 import "../styles/servicesPage.css";
 
+import SEO from "../components/seo/SEO";
+
 const SERVICE_API = `${API}/api/services`;
 
 function Services() {
@@ -76,6 +78,14 @@ function Services() {
   }
 
   return (
+  <>
+    <SEO
+      title="Diagnostic Services | Burdwan Scan Centre"
+      description="Explore MRI, CT Scan, Ultrasound, Digital X-Ray, Pathology, Cardiology and other advanced diagnostic services available at Burdwan Scan Centre."
+      keywords="MRI Burdwan, CT Scan Burdwan, Ultrasound Burdwan, X-Ray Burdwan, Pathology Burdwan, Diagnostic Services"
+      url="/services"
+    />
+
     <div className="diagnostic-premium-page">
 
       {/* TOP HEADER */}
@@ -353,7 +363,8 @@ function Services() {
 
       )}
 
-    </div>
+        </div>
+  </>
   );
 }
 

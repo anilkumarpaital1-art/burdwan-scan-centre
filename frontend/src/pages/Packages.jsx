@@ -13,6 +13,8 @@ import API from "../config/api";
 
 import "../styles/packagesPage.css";
 
+import SEO from "../components/seo/SEO";
+
 function Packages() {
 
   const [packages, setPackages] = useState([]);
@@ -69,6 +71,13 @@ function Packages() {
     );
 
   return (
+  <>
+    <SEO
+      title="Health Packages | Burdwan Scan Centre"
+      description="Explore affordable preventive health check-up packages, diagnostic packages, and comprehensive screening packages at Burdwan Scan Centre."
+      keywords="Health Packages Burdwan, Diagnostic Packages, Health Checkup, Preventive Health Package, Burdwan Scan Centre"
+      url="/packages"
+    />
 
     <section className="pkg-page">
 
@@ -368,6 +377,9 @@ function Packages() {
           
 
     </section>
+
+    </>
+    
   );
 }
 
