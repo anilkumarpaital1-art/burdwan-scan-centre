@@ -38,6 +38,8 @@ import TermsConditions from "./pages/TermsConditions";
 
 import Footer from "./components/footer/Footer";
 
+import NotFound from "./pages/NotFound";
+
 
 
 function App() {
@@ -110,6 +112,8 @@ function App() {
   path="/terms-and-conditions"
   element={<TermsConditions />}
 />
+
+<Route path="*" element={<NotFound />} />
 
         <Route
           path="/admin-login-bsc-2026"
