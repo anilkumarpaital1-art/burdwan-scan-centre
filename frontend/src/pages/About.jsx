@@ -18,29 +18,35 @@ import director from "../assets/about/anamika-nag.jpg";
 
 import "../styles/aboutPage.css";
 
+const establishedYear = 1992;
+const currentYear = new Date().getFullYear();
+const yearsOfExcellence = currentYear - establishedYear;
+
 const features = [
   {
     icon: <FaAward />,
-    title: "30+ Years of Excellence",
-    text: "Delivering trusted diagnostic healthcare since 1992.",
+    title: `${yearsOfExcellence}+ Years of Excellence`,
+    text: "Delivering trusted diagnostic healthcare with uncompromising quality since 1992.",
   },
   {
     icon: <FaFlask />,
-    title: "NABL Accredited",
-    text: "Quality pathology services following standardized laboratory practices.",
+    title: "NABL Accredited Laboratory",
+    text: "Quality assured laboratory services that follow nationally recognized standards.",
   },
   {
     icon: <FaHospital />,
     title: "Advanced Diagnostics",
-    text: "Modern imaging and pathology services under one roof.",
+    text: "Comprehensive imaging and pathology services supported by modern technology.",
   },
 ];
 
+
+
 const stats = [
   {
-    value: "34+",
-    label: "Years of Excellence",
-  },
+  value: `${yearsOfExcellence}+`,
+  label: "Years of Excellence",
+},
   {
     value: "NABL",
     label: "Accredited Laboratory",
@@ -66,7 +72,7 @@ const missionVision = [
     icon: <FaEye />,
     title: "Our Vision",
     text:
-      "To become the most trusted diagnostic healthcare provider through innovation, quality and continuous improvement.",
+      "To become Eastern India's most trusted diagnostic healthcare provider through innovation, quality and continuous improvement.",
   },
 ];
 
@@ -74,32 +80,32 @@ const values = [
   {
     icon: <FaCheckCircle />,
     title: "Accuracy",
-    text: "Reliable diagnostic reporting backed by stringent quality standards.",
+    text: "Every report is produced with precision and strict quality standards.",
   },
   {
     icon: <FaShieldAlt />,
     title: "Integrity",
-    text: "Transparent, ethical and responsible medical practices.",
+    text: "Ethical practices, transparency and honesty guide every investigation.",
   },
   {
     icon: <FaHeartbeat />,
     title: "Patient First",
-    text: "Every patient is treated with compassion and dignity.",
+    text: "Every patient deserves compassionate care, respect and comfort.",
   },
   {
     icon: <FaMicroscope />,
     title: "Innovation",
-    text: "Advanced diagnostic technology for better healthcare.",
+    text: "Advanced technology that supports better clinical decisions.",
   },
   {
     icon: <FaUserMd />,
     title: "Expertise",
-    text: "Experienced specialists delivering dependable diagnostics.",
+    text: "Experienced specialists delivering dependable diagnostic excellence.",
   },
   {
     icon: <FaAward />,
     title: "Excellence",
-    text: "Committed to quality in every investigation we perform.",
+    text: "Committed to continuous improvement in every service we provide.",
   },
 ];
 
@@ -161,11 +167,23 @@ function AboutPage() {
             Scan Centre
           </h1>
 
+          <h3
+            style={{
+              color: "#fff",
+              fontWeight: "600",
+              margin: "18px 0",
+              letterSpacing: ".5px",
+            }}
+          >
+            Burdwan's Trusted NABL Accredited Diagnostics Centre.
+          </h3>
+
           <p>
-            Burdwan Scan Centre Pvt. Ltd. has been providing trusted
-            diagnostic and imaging services for more than three decades,
+            For more than three decades, Burdwan Scan Centre Pvt. Ltd.
+            has been delivering trusted diagnostic and imaging services,
             combining advanced technology, experienced specialists and
-            compassionate patient care.
+            compassionate patient care to help every patient make informed
+            healthcare decisions with confidence.
           </p>
 
         </div>
@@ -173,48 +191,75 @@ function AboutPage() {
 
       {/* ================= ABOUT ================= */}
 
-      <section className="about-section">
+<section className="about-section">
 
-  <div className="section-heading">
-    <span>WHO WE ARE</span>
+  <div className="about-container">
 
-    <h2>
-      Trusted Diagnostic Excellence Since 1992
-    </h2>
-  </div>
+    <div className="section-heading">
 
-  <div className="about-text">
+      <span>WHO WE ARE</span>
 
-    <p>
-      Burdwan Scan Centre Pvt. Ltd. is one of Eastern India's trusted
-      diagnostic centres, delivering reliable imaging and pathology
-      services since 1992.
-    </p>
+      <h2>
+        Trusted Diagnostic Excellence
+        <br />
+        Since 1992
+      </h2>
 
-    <p>
-      Equipped with advanced diagnostic technology, an NABL accredited
-      pathology laboratory and an experienced team of specialists,
-      we continue to provide accurate investigations while maintaining
-      the highest standards of quality and ethics.
-    </p>
+    </div>
 
-  </div>
+    <div className="about-content">
 
-  <div className="feature-grid">
+      <div className="about-tagline">
+        Precision. Care. Trust.
+      </div>
 
-    {features.map((item,index)=>(
-      <div className="feature-card" key={index}>
+      <p>
+        Burdwan Scan Centre Pvt. Ltd. is one of Eastern India's trusted
+        diagnostic centres, providing high-quality imaging and pathology
+        services with a commitment to clinical excellence since 1992.
+      </p>
 
-        <div className="feature-icon">
-          {item.icon}
+      <p>
+        Equipped with advanced diagnostic technology, an NABL accredited
+        pathology laboratory and an experienced team of healthcare
+        professionals, we ensure accurate investigations while maintaining
+        the highest standards of quality, safety and ethics.
+      </p>
+
+    </div>
+
+    <div className="feature-grid">
+
+      {features.map((item, index) => (
+
+        <div
+          key={index}
+          className="feature-card"
+        >
+
+          <div className="feature-icon">
+
+            {item.icon}
+
+          </div>
+
+          <h3>
+
+            {item.title}
+
+          </h3>
+
+          <p>
+
+            {item.text}
+
+          </p>
+
         </div>
 
-        <h4>{item.title}</h4>
+      ))}
 
-        <p>{item.text}</p>
-
-      </div>
-    ))}
+    </div>
 
   </div>
 
@@ -241,7 +286,7 @@ function AboutPage() {
 
       </section>
 
-            {/* ================= MISSION & VISION ================= */}
+      {/* ================= MISSION & VISION ================= */}
 
       <section className="purpose-section">
 
@@ -254,6 +299,19 @@ function AboutPage() {
           </h2>
 
         </div>
+
+       <p
+  style={{
+    textAlign: "center",
+    color: "var(--primary)",
+    fontWeight: "700",
+    fontSize: "1.15rem",
+    margin: "22px auto 55px",
+    letterSpacing: ".3px",
+  }}
+>
+          Accurate Results. Better Care.
+        </p>
 
         <div className="purpose-grid">
 
@@ -280,8 +338,6 @@ function AboutPage() {
 
       </section>
 
-
-
       {/* ================= VALUES ================= */}
 
       <section className="values-section">
@@ -306,9 +362,7 @@ function AboutPage() {
             >
 
               <div className="value-icon">
-
                 {item.icon}
-
               </div>
 
               <h4>{item.title}</h4>
@@ -322,10 +376,7 @@ function AboutPage() {
         </div>
 
       </section>
-
-
-
-      {/* ================= WHY CHOOSE US ================= */}
+            {/* ================= WHY CHOOSE US ================= */}
 
       <section className="why-section">
 
@@ -339,15 +390,31 @@ function AboutPage() {
 
         </div>
 
+        <p
+  style={{
+    textAlign: "center",
+    color: "var(--primary)",
+    fontWeight: "700",
+    fontSize: "1.15rem",
+    margin: "22px auto 55px",
+    letterSpacing: ".3px",
+  }}
+>
+  Modern & Advanced Technology. Reliable Results.
+</p>
+
         <div className="why-grid">
 
           <div className="why-card">
 
             <FaHospital />
 
-            <h4>
-              Advanced Imaging
-            </h4>
+            <h4>Advanced Imaging</h4>
+
+            <p>
+              State-of-the-art imaging systems delivering high-quality diagnostic
+              results with precision.
+            </p>
 
           </div>
 
@@ -355,9 +422,12 @@ function AboutPage() {
 
             <FaFlask />
 
-            <h4>
-              NABL Accredited Laboratory
-            </h4>
+            <h4>NABL Accredited Laboratory</h4>
+
+            <p>
+              Every laboratory investigation follows stringent quality standards
+              for dependable reporting.
+            </p>
 
           </div>
 
@@ -365,9 +435,12 @@ function AboutPage() {
 
             <FaUserMd />
 
-            <h4>
-              Experienced Specialists
-            </h4>
+            <h4>Experienced Specialists</h4>
+
+            <p>
+              Skilled doctors and laboratory professionals committed to clinical
+              excellence.
+            </p>
 
           </div>
 
@@ -375,9 +448,12 @@ function AboutPage() {
 
             <FaShieldAlt />
 
-            <h4>
-              Quality Assurance
-            </h4>
+            <h4>Quality Assurance</h4>
+
+            <p>
+              Every investigation is backed by standardized quality protocols and
+              continuous monitoring.
+            </p>
 
           </div>
 
@@ -385,9 +461,12 @@ function AboutPage() {
 
             <FaHeartbeat />
 
-            <h4>
-              Patient First Care
-            </h4>
+            <h4>Patient-Centric Care</h4>
+
+            <p>
+              Compassionate service focused on comfort, confidence and better
+              healthcare experiences.
+            </p>
 
           </div>
 
@@ -395,9 +474,12 @@ function AboutPage() {
 
             <FaAward />
 
-            <h4>
-              Trusted Since 1992
-            </h4>
+            <h4>Trusted Since 1992</h4>
+
+            <p>
+              More than three decades of reliable diagnostics trusted by
+              generations of families.
+            </p>
 
           </div>
 
@@ -413,13 +495,26 @@ function AboutPage() {
 
         <div className="section-heading">
 
-          <span>LEADERSHIP</span>
+          <span>FOUNDER & LEADERSHIP</span>
 
           <h2>
-            Meet Our Leadership
+            The Visionaries Behind Burdwan Scan Centre
           </h2>
 
         </div>
+
+        <p
+  style={{
+    textAlign: "center",
+    maxWidth: "760px",
+    margin: "22px auto 55px",
+    color: "#64748b",
+    lineHeight: "1.9",
+    fontSize: "1.08rem",
+  }}
+>
+          Founded in 1992, Burdwan Scan Centre is built on a legacy of trust, integrity, and excellence. Inspired by the vision of our founding members, we remain committed to accurate diagnostics, advanced technology, and compassionate patient care.
+        </p>
 
         <div className="leaders-grid">
 
@@ -437,13 +532,9 @@ function AboutPage() {
 
               <div className="leader-content">
 
-                <h3>
-                  {leader.name}
-                </h3>
+                <h3>{leader.name}</h3>
 
-                <p>
-                  {leader.designation}
-                </p>
+                <p>{leader.designation}</p>
 
               </div>
 
@@ -471,6 +562,20 @@ function AboutPage() {
 
         </div>
 
+       <p
+  style={{
+    textAlign: "center",
+    color: "#64748b",
+    maxWidth: "760px",
+    margin: "22px auto 55px",
+    lineHeight: "1.9",
+    fontSize: "1.08rem",
+  }}
+>
+          Serving patients across Burdwan and beyond through accessible
+          diagnostic facilities and dedicated healthcare support.
+        </p>
+
         <div className="office-grid">
 
           {offices.map((office, index) => (
@@ -482,19 +587,11 @@ function AboutPage() {
 
               <FaMapMarkerAlt />
 
-              <h3>
-
-                {office.title}
-
-              </h3>
+              <h3>{office.title}</h3>
 
               {office.address.map((line, i) => (
 
-                <p key={i}>
-
-                  {line}
-
-                </p>
+                <p key={i}>{line}</p>
 
               ))}
 
@@ -519,16 +616,27 @@ function AboutPage() {
           </span>
 
           <h2>
-            Accuracy You Can Trust
+            Certified Accuracy. Trusted Care.
           </h2>
+
+          <h4
+            style={{
+              color: "#ffffff",
+              margin: "20px 0",
+              fontWeight: "700",
+            }}
+          >
+            NABL Accredited Excellence in Diagnostics.
+          </h4>
 
           <p>
 
-            Every investigation performed at Burdwan Scan Centre
-            follows standardized quality protocols supported by
-            experienced professionals and advanced diagnostic
-            technology, ensuring dependable reports for clinicians
-            and patients.
+            Every investigation performed at Burdwan Scan Centre follows
+            standardized quality protocols, supported by experienced healthcare
+            professionals and advanced diagnostic technology. Our commitment to
+            accuracy ensures dependable reports that help clinicians make
+            confident medical decisions while giving patients the assurance they
+            deserve.
 
           </p>
 
@@ -544,19 +652,31 @@ function AboutPage() {
 
         <h2>
 
-          Trusted Diagnostics.
+          Delivering Trust
           <br />
-          Compassionate Healthcare.
+          Through Diagnostics.
 
         </h2>
 
         <p>
 
-          For over three decades, Burdwan Scan Centre has remained
-          committed to providing accurate diagnostics through
-          technology, expertise and patient-first care.
+          From advanced imaging to comprehensive laboratory investigations,
+          Burdwan Scan Centre remains dedicated to providing accurate
+          diagnostics, compassionate care and dependable healthcare services
+          for every family.
 
         </p>
+
+        <h4
+          style={{
+            color: "#fff",
+            marginTop: "25px",
+            fontWeight: "600",
+            letterSpacing: ".5px",
+          }}
+        >
+          Your Health, Our Priority.
+        </h4>
 
       </section>
 

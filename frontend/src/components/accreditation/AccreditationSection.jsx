@@ -17,8 +17,8 @@ const yearsExperience = currentYear - establishedYear;
       <div className="accreditation-header">
         <h2>Our Accreditations & Recognition</h2>
         <p>
-          Trusted diagnostic services backed by accreditation,
-          training excellence, and decades of experience.
+          Trusted diagnostic services backed by team experts, accreditation,
+           and decades of experience.
         </p>
       </div>
 

@@ -351,3 +351,7 @@
         z-index:1100;
     }
 }
+
+.login-link{
+    white-space: nowrap;
+}

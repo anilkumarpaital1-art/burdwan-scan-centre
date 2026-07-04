@@ -6,7 +6,7 @@ import ServicesSection from "../components/services/ServicesSection";
 import PackagesSection from "../components/packages/PackagesSection";
 import AboutSection from "../components/about/AboutSection";
 import Testimonials from "../components/testimonials/Testimonials";
-import Footer from "../components/footer/Footer";
+
 import ContactSection from "../components/contact/ContactSection";
 import EquipmentSlider from "../components/equipment/EquipmentSlider";
 import GallerySection from "../components/gallery/GallerySection";
@@ -91,7 +91,7 @@ useEffect(() => {
       <NoticePreview /> 
       <Testimonials />
       <ContactSection />
-      <Footer />
+ 
       
     </>
   );

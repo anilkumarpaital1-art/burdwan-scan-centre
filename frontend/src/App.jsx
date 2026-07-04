@@ -33,6 +33,11 @@ import ManageNotice from "./admin/pages/ManageNotice";
 import Profile from "./admin/pages/Profile";
 import ResetPassword from "./admin/pages/ResetPassword";
 
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsConditions from "./pages/TermsConditions";
+
+import Footer from "./components/footer/Footer";
+
 
 
 function App() {
@@ -96,6 +101,16 @@ function App() {
     element={<Appointment />}
   />
 
+  <Route
+  path="/privacy-policy"
+  element={<PrivacyPolicy />}
+/>
+
+<Route
+  path="/terms-and-conditions"
+  element={<TermsConditions />}
+/>
+
         <Route
           path="/admin-login-bsc-2026"
           element={<AdminLogin />}
@@ -155,6 +170,9 @@ function App() {
 
             </Routes>
   </main>
+
+  {!hideNavbar && <Footer />}
+
 </>
   );
 }

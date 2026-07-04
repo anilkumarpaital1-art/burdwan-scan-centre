@@ -109,17 +109,23 @@ body{
 .aboutpg-overlay{
     position: relative;
     z-index: 2;
+
     width: min(1200px, 90%);
+    max-width: 900px;
+
     margin: auto;
-    color: #fff;
-    max-width: 760px;
 
     display: flex;
     flex-direction: column;
+    align-items: center;      /* Centers all children horizontally */
+    justify-content: center;
+    text-align: center;       /* Centers all text */
+
+    color: #fff;
 }
 
 .aboutpg-overlay span{
-    align-self: center;   /* Centers only the badge */
+
 
     display: inline-flex;
     align-items: center;
@@ -145,6 +151,8 @@ body{
   font-weight:800;
   line-height:1.05;
   margin-bottom:28px;
+  max-width: 900px;
+    margin: 0 auto 28px;
 }
 
 .aboutpg-overlay p{
@@ -152,17 +160,319 @@ body{
   line-height:1.9;
   max-width:680px;
   color:rgba(255,255,255,.92);
+  
 }
 
-/* ========================================================= ABOUT ========================================================= */ 
-.about-grid{ display:grid; grid-template-columns:1.1fr .9fr; gap:70px; align-items:center; } 
-.about-text p{ font-size:1.08rem; line-height:2; color:var(--text-light); margin-bottom:28px; } 
-/* ========================================================= FEATURES ========================================================= */ 
-.feature-grid{ display:grid; gap:22px; } 
-.feature-card{ display:flex; align-items:flex-start; gap:22px; background:#fff; border-radius:18px; padding:28px; border:1px solid var(--border); box-shadow:var(--shadow); transition:var(--transition); } 
-.feature-card:hover{ transform:translateY(-8px); box-shadow:var(--shadow-hover); } 
-.feature-icon{ width:65px; height:65px; border-radius:16px; display:grid; place-items:center; background:linear-gradient( 135deg, var(--primary), var(--secondary)); color:#fff; font-size:1.5rem; flex-shrink:0; } 
-.feature-card h4{ font-size:1.2rem; margin-bottom:10px; } .feature-card p{ color:var(--text-light); line-height:1.7; }
+/* =========================================================
+   ABOUT SECTION
+========================================================= */
+
+.about-section{
+    padding:110px 0;
+    background:#fff;
+}
+
+.about-container{
+
+    width:min(1450px,95%);
+    margin:0 auto;
+
+}
+
+.section-heading{
+
+    max-width:900px;
+    margin:0 auto;
+
+    text-align:center;
+
+}
+
+.section-heading span{
+
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    gap:18px;
+
+    color:var(--primary);
+
+    font-size:1rem;
+    font-weight:700;
+    letter-spacing:4px;
+    text-transform:uppercase;
+
+    margin-bottom:22px;
+
+}
+
+.section-heading span::before,
+.section-heading span::after{
+
+    content:"";
+
+    width:58px;
+    height:2px;
+
+    background:#72b6ff;
+
+}
+
+.section-heading h2{
+
+    font-size:clamp(3rem,4vw,4.4rem);
+
+    font-weight:700;
+
+    line-height:1.12;
+
+    color:#17233c;
+
+}
+
+.about-content{
+
+    max-width:980px;
+
+    margin:45px auto 75px;
+
+    text-align:center;
+
+}
+
+.about-tagline{
+
+    display:inline-block;
+
+    color:#0056c7;
+
+    font-size:2rem;
+    font-weight:700;
+
+    margin-bottom:25px;
+
+    position:relative;
+
+}
+
+.about-tagline::after{
+
+    content:"";
+
+    display:block;
+
+    width:70px;
+    height:4px;
+
+    margin:18px auto 0;
+
+    border-radius:20px;
+
+    background:#10b7aa;
+
+}
+
+.about-content p{
+
+    max-width:980px;
+
+    margin:0 auto 26px;
+
+    color:#566476;
+
+    line-height:1.9;
+
+    font-size:1.22rem;
+
+}
+
+
+/* =========================================================
+   FEATURE GRID
+========================================================= */
+
+.feature-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,minmax(370px,1fr));
+
+    justify-content:center;
+
+    gap:34px;
+
+}
+
+.feature-card{
+
+    background:#fff;
+
+    border:1px solid #e7edf7;
+
+    border-radius:28px;
+
+    padding:48px 40px;
+
+    min-height:430px;
+
+    text-align:center;
+
+    transition:.35s;
+
+    box-shadow:
+    0 10px 35px rgba(20,45,90,.05);
+
+}
+
+.feature-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:
+    0 25px 60px rgba(20,45,90,.12);
+
+}
+
+.feature-icon{
+
+    width:94px;
+    height:94px;
+
+    margin:0 auto 30px;
+
+    border-radius:24px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:#eaf3ff;
+
+    color:#0d57c6;
+
+    font-size:2.3rem;
+
+}
+
+.feature-card h3{
+
+    font-size:2.15rem;
+
+    line-height:1.25;
+
+    font-weight:700;
+
+    color:#18223d;
+
+    margin-bottom:22px;
+
+}
+
+.feature-card h3::after{
+
+    content:"";
+
+    display:block;
+
+    width:60px;
+    height:4px;
+
+    margin:22px auto 0;
+
+    background:#11b6aa;
+
+    border-radius:20px;
+
+}
+
+.feature-card p{
+
+    font-size:1.12rem;
+
+    line-height:2;
+
+    color:#64748b;
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media(max-width:1200px){
+
+.about-container{
+
+    width:94%;
+
+}
+
+.feature-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+
+@media(max-width:768px){
+
+.about-section{
+
+    padding:75px 0;
+
+}
+
+.about-content{
+
+    margin-bottom:50px;
+
+}
+
+.section-heading h2{
+
+    font-size:2.4rem;
+
+}
+
+.about-tagline{
+
+    font-size:1.7rem;
+
+}
+
+.about-content p{
+
+    font-size:1.05rem;
+
+}
+
+.feature-grid{
+
+    grid-template-columns:1fr;
+
+    gap:26px;
+
+}
+
+.feature-card{
+
+    min-height:auto;
+
+    padding:38px 30px;
+
+}
+
+.feature-card h3{
+
+    font-size:1.8rem;
+
+}
+
+}
 
 /* =========================================================
    STATS
@@ -179,8 +489,40 @@ body{
 }
 
 .stat-card{
-  text-align:center;
-  padding:25px;
+    position: relative;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 40px 25px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+.stat-card::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: var(--primary);
+}
+
+.stat-card:nth-child(1)::before{
+    background:#3b82f6;
+}
+
+.stat-card:nth-child(2)::before{
+    background:#06b6d4;
+}
+
+.stat-card:nth-child(3)::before{
+    background:#10b981;
+}
+
+.stat-card:nth-child(4)::before{
+    background:#8b5cf6;   /* or use #3b82f6 if you want the same blue */
 }
 
 .stat-card h2{
@@ -216,6 +558,7 @@ body{
   transition:.35s ease;
   position:relative;
   overflow:hidden;
+  
 }
 
 .purpose-card::before{
@@ -283,6 +626,8 @@ body{
 
 .value-card{
   background:#fff;
+  align-items:center;
+  text-align:center;
   border:1px solid var(--border);
   border-radius:20px;
   padding:35px;
@@ -296,15 +641,24 @@ body{
 }
 
 .value-icon{
-  width:64px;
-  height:64px;
-  border-radius:16px;
-  display:grid;
-  place-items:center;
-  background:#eef7ff;
-  color:var(--primary);
-  font-size:1.6rem;
-  margin-bottom:25px;
+
+    width:84px;
+    height:84px;
+
+    border-radius:22px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:#eaf3ff;
+
+    color:var(--primary);
+
+    font-size:2rem;
+
+    margin:0 auto 28px;
+
 }
 
 .value-card h4{
@@ -353,6 +707,16 @@ body{
   font-size:1.15rem;
   font-weight:600;
   line-height:1.5;
+}
+
+.why-card p{
+    font-size:1.08rem;
+    color:#64748b;
+    line-height:1.7;
+
+    max-width:330px;
+
+    margin:0 auto;
 }
 
 

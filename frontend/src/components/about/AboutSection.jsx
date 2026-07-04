@@ -99,7 +99,7 @@ import "../../styles/about.css";
 
   <div className="stat-box">
     <h1>
-      365 <span style={{ fontSize: "0.6em" }}>24/7</span>
+      365 <span style={{ fontSize: "0.6em" }}>12/7</span>
     </h1>
     <p>Days Support</p>
   </div>

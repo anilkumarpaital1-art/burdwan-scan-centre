@@ -74,9 +74,13 @@ function Footer() {
 
             <FaMapMarkerAlt />
 
-            <span>
-              Khoshbagan, Burdwan, West Bengal
-            </span>
+            <a
+  href="https://maps.google.com/?q=Burdwan+Scan+Centre+Khoshbagan+Burdwan+West+Bengal"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  Khoshbagan, Burdwan, West Bengal
+</a>
 
           </div>
 
@@ -84,9 +88,19 @@ function Footer() {
 
             <FaPhoneAlt />
 
-            <span>
-              +91 0342-2550829
-            </span>
+            <div className="footer-phone-links">
+
+  <a href="tel:+913422550829">
+    +91 0342-2550829
+  </a>
+
+  {" | "}
+
+  <a href="tel:+913422567533">
+    +91 0342-2567533
+  </a>
+
+</div>
 
           </div>
 
@@ -108,15 +122,29 @@ function Footer() {
 
       <div className="footer-bottom">
 
-        <p>
-          © 2026 Burdwan Scan Centre. All Rights Reserved.
-        </p>
+  <p>
+    © {new Date().getFullYear()} Burdwan Scan Centre. All Rights Reserved.
+  </p>
 
-        <span>
-          Designed & Developed by ANIL_KP
-        </span>
+  <div className="footer-bottom-links">
 
-      </div>
+    <Link to="/privacy-policy">
+      Privacy Policy
+    </Link>
+
+    <span>|</span>
+
+    <Link to="/terms-and-conditions">
+      Terms & Conditions
+    </Link>
+
+  </div>
+
+  <span>
+    Designed & Developed by ANIL_KP
+  </span>
+
+</div>
 
     </footer>
   );

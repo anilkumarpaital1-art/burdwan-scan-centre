@@ -145,6 +145,15 @@ export default function Navbar() {
             Contact
           </a>
 
+          <a
+  href="https://nextgenlabplus.com/login.php?getclientcd=CL24997550"
+  className="contact-link login-link"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  Login
+</a>
+
           {/* CTA */}
 
           <Link
