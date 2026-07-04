@@ -104,7 +104,14 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log("\n====================================");
   console.log("🚀 Burdwan Scan Centre Backend");
-  console.log(`🌐 Server Running On : http://localhost:${PORT}`);
+  console.log(
+    `🌐 Server Running On : ${
+      process.env.RENDER_EXTERNAL_URL || `http://localhost:${PORT}`
+    }`
+  );
   console.log(`📡 API Status        : ACTIVE`);
-  console.log(`⚡ Environment       : DEVELOPMENT`);
+  console.log(
+    `⚡ Environment       : ${process.env.NODE_ENV || "DEVELOPMENT"}`
+  );
+  console.log("====================================");
 });
