@@ -113,7 +113,7 @@ function App() {
   element={<TermsConditions />}
 />
 
-<Route path="*" element={<NotFound />} />
+
 
         <Route
           path="/admin-login-bsc-2026"
@@ -171,6 +171,8 @@ function App() {
           />
 
         </Route>
+
+        <Route path="*" element={<NotFound />} />
 
             </Routes>
   </main>
