@@ -460,3 +460,15 @@
         transform: translateY(-3px);
     }
 }
+
+
+.services-section .section-title{
+    display:block !important;
+    text-align:center !important;
+}
+
+.services-section .section-title h2,
+.services-section .section-title p{
+    display:block;
+    width:100%;
+}

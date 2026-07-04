@@ -863,3 +863,13 @@
 
 }
 
+.packages-section .section-title{
+    display:block !important;
+    text-align:center !important;
+}
+
+.packages-section .section-title h2,
+.packages-section .section-title p{
+    display:block;
+    width:100%;
+}
