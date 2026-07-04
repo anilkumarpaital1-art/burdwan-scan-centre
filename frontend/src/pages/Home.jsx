@@ -15,6 +15,9 @@ import NoticePreview from "../components/notice/NoticePreview";
 import AccreditationSection from "../components/accreditation/AccreditationSection";
 import API_URL from "../config/api";
 
+import SEO from "../components/seo/SEO";
+import StructuredData from "../components/seo/StructuredData";
+
 
 function Home() {
 
@@ -79,6 +82,14 @@ useEffect(() => {
 
   return (
     <>
+    <SEO
+      title="MRI, CT Scan & Advanced Diagnostic Centre in Burdwan"
+      description="Burdwan Scan Centre provides MRI, CT Scan, Digital X-Ray, Ultrasound, ECG, Pathology, and advanced diagnostic services in Burdwan with experienced specialists and modern equipment."
+      keywords="Burdwan Scan Centre, MRI Burdwan, CT Scan Burdwan, Ultrasound Burdwan, X-Ray Burdwan, Diagnostic Centre Burdwan, Pathology Lab Burdwan"
+      url="/"
+    />
+
+    <StructuredData />
 
       <Hero />
       <AboutSection />
