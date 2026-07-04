@@ -13,7 +13,7 @@ import {
 import "./../styles/AdminSidebar.css";
 
 // Replace later with your real logo
-import logo from "../assets/logo.jpg";
+import logo from "../assets/logo.png";
 
 const AdminSidebar = ({
   sidebarOpen,
