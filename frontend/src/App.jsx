@@ -39,6 +39,7 @@ import TermsConditions from "./pages/TermsConditions";
 import Footer from "./components/footer/Footer";
 
 import NotFound from "./pages/NotFound";
+import Analytics from "./components/Analytics";
 
 
 
@@ -54,6 +55,7 @@ function App() {
     <>
 
     <ScrollToTop />
+    <Analytics />
 
     
   {!hideNavbar && <Navbar />}
