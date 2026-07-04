@@ -6,16 +6,5 @@ export default defineConfig({
 
   build: {
     chunkSizeWarningLimit: 700,
-
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          react: ["react", "react-dom"],
-          router: ["react-router-dom"],
-          axios: ["axios"],
-          icons: ["react-icons"],
-        },
-      },
-    },
   },
 });

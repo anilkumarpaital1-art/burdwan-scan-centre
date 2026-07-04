@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import useCountUp from "../../hooks/useCountUp";
 
-import aboutHero from "../assets/about/aboutHero.jpg";
+import aboutHero from "../../assets/about/aboutHero.jpg";
 
 import "../../styles/about.css";
 
