@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import useCountUp from "../../hooks/useCountUp";
 
-import hospitalImage from "../../assets/about/aboutHero.jpg";
+import aboutHero from "../assets/about/aboutHero.jpg";
 
 import "../../styles/about.css";
 
@@ -49,7 +49,7 @@ import "../../styles/about.css";
       <div className="about-left">
 
         <img
-  src={hospitalImage}
+  src={aboutHero}
   alt="Burdwan Scan Centre"
 />
 
