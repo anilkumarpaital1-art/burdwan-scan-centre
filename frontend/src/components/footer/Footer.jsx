@@ -123,7 +123,7 @@ function Footer() {
       <div className="footer-bottom">
 
   <p>
-    © {new Date().getFullYear()} Burdwan Scan Centre. All Rights Reserved.
+    © {new Date().getFullYear()} Burdwan Scan Centre Pvt Ltd. All Rights Reserved.
   </p>
 
   <div className="footer-bottom-links">
@@ -136,6 +136,12 @@ function Footer() {
 
     <Link to="/terms-and-conditions">
       Terms & Conditions
+    </Link>
+
+    <span>|</span>
+
+    <Link to="/refund-cancellation-policy">
+      Refund & Cancellations
     </Link>
 
   </div>

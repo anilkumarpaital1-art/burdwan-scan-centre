@@ -35,11 +35,14 @@ import ResetPassword from "./admin/pages/ResetPassword";
 
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsConditions from "./pages/TermsConditions";
+import RefundCancellationPolicy from "./pages/RefundCancellationPolicy";
 
 import Footer from "./components/footer/Footer";
 
 import NotFound from "./pages/NotFound";
 import Analytics from "./components/GoogleAnalytics/GoogleAnalytics";
+
+
 
 
 
@@ -113,6 +116,11 @@ function App() {
 <Route
   path="/terms-and-conditions"
   element={<TermsConditions />}
+/>
+
+<Route
+  path="/refund-cancellation-policy"
+  element={<RefundCancellationPolicy />}
 />
 
 
