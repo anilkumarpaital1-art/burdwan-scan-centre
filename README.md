@@ -56,7 +56,7 @@ The project follows a separated frontend and backend architecture and uses cloud
 
 **Burdwan Scan Centre**
 
-https://burdwan-scan-centre.vercel.app/
+https://burdwanscancentre.com/
 
 ---
 
