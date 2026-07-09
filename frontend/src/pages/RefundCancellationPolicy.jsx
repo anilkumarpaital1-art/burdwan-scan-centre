@@ -82,8 +82,7 @@ export default function RefundCancellationPolicy() {
               <h4>Address</h4>
 
               <p>
-                7, R B Ghosh Road, Khoshbagan,
-                Burdwan - 713101, West Bengal, India
+                Burdwan, West Bengal, India
               </p>
             </div>
 
