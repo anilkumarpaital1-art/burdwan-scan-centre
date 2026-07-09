@@ -308,6 +308,15 @@
   word-break: normal;
 }
 
+/* Keep company name and address on one line on desktop */
+
+.company-item:first-child p,
+.company-item:nth-child(2) p {
+  white-space: nowrap;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
 
 /* ==========================================================
    MAIN PRIVACY GRID
