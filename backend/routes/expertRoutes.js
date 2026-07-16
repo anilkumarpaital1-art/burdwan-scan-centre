@@ -134,7 +134,7 @@ const updateData = {
   qualification:
     req.body.qualification ?? "",
 
-  eexperience: isNaN(
+  experience: isNaN(
     Number(req.body.experience)
     )
     ? 0

@@ -98,13 +98,15 @@ const authConfig = {
   }, []);
 
   const handleChange = (e) => {
+  const { name, value } = e.target;
 
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
+  console.log(name, value);
 
-  };
+  setFormData((prev) => ({
+    ...prev,
+    [name]: value,
+  }));
+};
 
   const handleImageChange = (e) => {
 
@@ -755,6 +757,7 @@ setShowDeleteModal(false);
                 className="form-input"
                 value={formData.experience}
                 onChange={handleChange}
+                onWheel={(e) => e.target.blur()}
               />
 
             </div>

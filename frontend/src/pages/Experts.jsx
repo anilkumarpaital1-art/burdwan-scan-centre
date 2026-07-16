@@ -78,9 +78,9 @@ function Experts() {
 
                 {expert.photo ? (
                   <img
-                    src={`${API}${expert.photo}`}
-                    alt={expert.name}
-                  />
+  src={expert.photo}
+  alt={expert.name}
+/>
                 ) : (
                   <div className="experts-public-placeholder">
                     👨‍⚕️

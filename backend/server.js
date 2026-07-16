@@ -51,7 +51,12 @@ connectDB();
 ========================= */
 app.use(helmet());
 
-const allowedOrigins = process.env.FRONTEND_URLS.split(",");
+const allowedOrigins = (
+  process.env.FRONTEND_URLS ||
+  "http://localhost:5173"
+)
+  .split(",")
+  .map((origin) => origin.trim());
 
 app.use(
   cors({
